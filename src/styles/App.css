@@ -1,0 +1,44 @@
+.App{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.AppHeader {
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 20px 4px 12px;
+    border-bottom: 1px solid rgba(0,0,0,0.15);
+}
+.AppHeader BellFilled{
+    padding-right: 100px;
+}
+.icons-header{
+    gap:20px !important;
+}
+
+.card-desc{
+    font-weight: bold;
+    font-size:16px ;
+    cursor: pointer;
+}
+.AppFooter {
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-top: 1px solid rgba(0,0,0,0.15);
+
+}
+
+.SidebarAndContent{
+    display: flex;
+    flex: 1;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.AppSidebar{
+    width: 138px;
+}
