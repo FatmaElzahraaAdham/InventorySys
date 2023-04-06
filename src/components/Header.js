@@ -1,16 +1,18 @@
-import { Badge, Image ,Space} from "antd";
+import { Badge} from "antd";
 import {BellFilled,UserOutlined} from '@ant-design/icons';
 function Header(){
     return (
         <div className="AppHeader">
-        <Image width={40} src="/images/logo.png"></Image>
-        <Space className="icons-header">
-        <Badge count={20}>
-        <BellFilled style={{fontSize: 24}}/>
+   
+       <div className="header-right">
+       <Badge count={20}>
+        <BellFilled style={{fontSize: 24 , cursor:"pointer"}}/>
         </Badge>
         
-        <UserOutlined style={{fontSize: 24}}/>
-        </Space>
+        <UserOutlined className="icon-header-right"/>
+       </div>
+        
+      
         
         </div>
     )

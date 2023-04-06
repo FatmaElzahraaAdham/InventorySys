@@ -1,42 +1,33 @@
-import { AppstoreOutlined,BankOutlined,ShoppingCartOutlined,TeamOutlined } from "@ant-design/icons";
-import {Menu} from "antd";
+
 import { useNavigate } from "react-router-dom";
+import { SidebarData } from "./SidebarData";
+import {Logo} from "./Logo"
 function Sidebar(){
-    const navigate = useNavigate();
+   const navigate = useNavigate();
 
     return (
         <div className="AppSidebar">
-        <Menu 
-        onClick={(item) =>{
-            navigate(item.key)
-        }}
-         items ={[
-            {
-            label: "Dashboard",
-            icon: <AppstoreOutlined/>,
-             key: "/",
+        <Logo/>
+            <ul className="SidebarList">
 
-            },
-            {
-                label: "Warehouse",
-                icon: <BankOutlined/>,
-                key: "/Warehouse",
-            },
-            {
-                label:"Product",
-                icon: <ShoppingCartOutlined/>,
-                key: "/Product",
-            },
-            {
-                label :"Supervisor",
-                icon:<TeamOutlined/>,
-                key : "/Supervisor",
-            }
-        ]}>
-       
-        </Menu>
+                {SidebarData.map((val,key)=>{
+                    return (
+                        <li 
+                        key={key}
+                        className="row"
+                        
+                        onClick={() =>{
+                            navigate(val.link)
+                        }}
+                        >
+                            <div id="icon">{val.icon}</div><div id="title">{val.title}</div>
+                        </li>
+                    );
+                })}
+            </ul>
+        <div className="logout">Logout</div>
         </div>
-    )
+    );
 }
 
 export default Sidebar;

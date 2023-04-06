@@ -1,10 +1,9 @@
-import {Typography} from "antd"
 
-
+import "../styles/DashboardStyle.css"
 function Dashboard() {
     return (
-        <div>
-         <Typography.Title level={4}> Dashboard </Typography.Title>
+        <div className="content">
+          Dashboard 
         
             
        
