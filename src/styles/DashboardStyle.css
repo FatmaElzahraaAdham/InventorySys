@@ -1,7 +1,10 @@
-.content{
-    margin-left: 200px;
-    padding: 20px;
-    overflow-y: auto;
-    font-size: 40px;
-    font-weight: bold;
+.page-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-content .small-activity {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
