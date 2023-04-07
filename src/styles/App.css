@@ -3,6 +3,7 @@
 * {
     font-family: 'Mulish', sans-serif;
     color: #242934;
+    background-color: #f6f7fb;
 }
 body{
     margin: 0;
@@ -11,6 +12,7 @@ body{
 .App {
     width: 100vw;
     height: 100vh;
+    background-color: #f6f7fb;
 }
 .AppHeader{
     display: flex;
@@ -18,7 +20,7 @@ body{
     align-items: center;
     height: 70px;
     padding: 0 20px;
-    background-color: #eee;
+    background-color: white;
 }
 .header-right{
     display: flex;
@@ -27,6 +29,7 @@ body{
     flex: 1;
     gap: 27px;
     margin-right: 10px;
+    background-color: white;
 }
 .icon-header-right{
     background-color: #586382;
@@ -77,14 +80,13 @@ body{
     top: 0;
     left: 0;
     z-index: 2;
-
+    background-color: white;
 }
 .SidebarList{
     height: auto;
     padding: 0;
     width: 100%;
     margin: 0;
-    
 }
 
 .SidebarList .row{
@@ -97,12 +99,39 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    transition: 0.5s;
 }
-.SidebarList .row:hover{
+
+.SidebarList .row:hover {
+    cursor: pointer;
+    background-color: #e9e9e9;
+}
+
+.SidebarList .row:hover #title {
     cursor: pointer;
     background-color: #e9e9e9;
     color: #01bef6;
 }
+
+.SidebarList .row:hover #icon {
+    cursor: pointer;
+    background-color: #e9e9e9;
+}
+
+.SidebarList .row:hover svg {
+    cursor: pointer;
+    background-color: #e9e9e9;
+}
+
+.SidebarList .row:hover * {
+    transition: 0.5s;
+}
+
+.SidebarList * {
+    background-color: white;
+    transition: 0.5s;
+}
+
 .row #icon{
     flex: 30%;
     display: grid;
