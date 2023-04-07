@@ -1,0 +1,91 @@
+.warehouse-table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+.warehouse-table tr {
+    background-color: white;
+}
+
+.warehouse-table-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.warehouse-table-wrapper * {
+    background-color: white;
+}
+
+.warehouse-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.warehouse-table th,
+.warehouse-table td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+}
+
+.warehouse-table th {
+    background-color: #f2f2f2;
+}
+
+.warehouse-table th:first-child {
+    border-top-left-radius: 10px;
+}
+.warehouse-table th:last-child {
+    border-top-right-radius: 10px;
+}
+
+.warehouse-table td:last-child {
+    text-align: center;
+}
+
+.edit-btn,
+.delete-btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #ffffff;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+}
+
+.add-btn,
+.search-bar {
+    margin-left: 10px;
+}
+
+.add-btn {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #4caf50;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+}
+
+.Active {
+    color: #4caf50;
+}
+
+.Inactive {
+    color: #f44336;
+}
