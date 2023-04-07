@@ -2,13 +2,15 @@ import "../styles/SmallCard.css";
 
 
 function SmallCard(props) {
+    const { img, name, title, subtext } = props;
+
     return (
         <div className="small-card">
-            <img src={props.img} alt="img"/>
-            <h2>{props.name}</h2>
+            <img src={img} alt="img" />
+            <h2>{name}</h2>
             <div className="small-card-text">
-                <h1>{props.title}</h1>
-                <p>{props.subtext}</p>
+                <h1>{title}</h1>
+                <p>{subtext}</p>
             </div>
         </div>
     );

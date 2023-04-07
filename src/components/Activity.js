@@ -1,13 +1,21 @@
 import "../styles/Activity.css";
 import SmallCard from "./SmallCard";
 function Activity(props) {
+    const { title, cardsData } = props;
+
     return (
         <div className="wrapper">
-            <h1>{props.title}</h1>
+            <h1>{title}</h1>
             <div className="cards">
-                <SmallCard img="https://picsum.photos/200" name="Warehouse 15" title="Ordered" subtext="Order No.15"/>
-                <SmallCard img="https://picsum.photos/200" name="Warehouse 15" title="Ordered" subtext=""/>
-                <SmallCard img="https://picsum.photos/200" name="Warehouse 15" title="Ordered" subtext="Order No.15"/>
+                {cardsData.map((data, index) => (
+                    <SmallCard
+                        key={index}
+                        img={data.image}
+                        name={data.name}
+                        title={data.title}
+                        subtext={data.subtext}
+                    />
+                ))}
             </div>
         </div>
     );
