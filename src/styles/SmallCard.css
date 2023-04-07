@@ -11,6 +11,15 @@
     border-radius: 20px;
 
     background-color: white;
+
+    transition: all ease-in-out 0.2s;
+}
+
+.small-card:hover {
+    cursor: pointer;
+    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.4);*/
+    transform: scale(1.05);
+    transition: all ease-in-out 0.2s;
 }
 
 .small-card img {
