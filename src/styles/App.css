@@ -31,6 +31,10 @@ body{
     margin-right: 10px;
     background-color: white;
 }
+
+.header-right * {
+    background-color: white;
+}
 .icon-header-right{
     background-color: #586382;
     font-size: 26px;
@@ -64,6 +68,12 @@ body{
 .logo .e{
     color: #01bef6;
 }
+
+.logo svg {
+    background-color: #01bef6;
+    fill: white;
+}
+
 .icon-logo{
     color: white;
     background-color: #01bef6;
@@ -145,6 +155,7 @@ body{
     position: absolute;
     bottom: 0;
     margin: 15px 30%;
+    background-color: white;
 }
 .AppFooter{
     position: fixed;

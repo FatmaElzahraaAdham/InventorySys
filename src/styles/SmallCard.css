@@ -9,6 +9,8 @@
 
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 20px;
+
+    background-color: white;
 }
 
 .small-card img {
@@ -16,6 +18,10 @@
     width: 70px;
     object-fit: cover;
     border-radius: 20px;
+}
+
+.small-card * {
+    background-color: white;
 }
 
 /* h2 is the text under image */

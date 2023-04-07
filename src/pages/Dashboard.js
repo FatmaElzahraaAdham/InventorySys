@@ -8,6 +8,8 @@ function Dashboard() {
             <PageTitle title="Dashboard" subtext="Home/Summary"/>
             <div className="small-activity">
                 <Activity title="Activity Name"/>
+                <Activity title="Activity Name"/>
+                <Activity title="Activity Name"/>
             </div>
         </div>
 
