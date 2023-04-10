@@ -1,48 +1,50 @@
-.warehouse-table {
+.table {
     border-collapse: collapse;
     width: 100%;
     background-color: #ffffff;
     border-radius: 10px;
 }
-.warehouse-table tr {
+.table tr {
     background-color: white;
 }
 
-.warehouse-table-wrapper {
+.table-wrapper {
     background-color: white;
     padding: 1rem;
     border-radius: 1rem;
 }
 
-.warehouse-table-wrapper * {
+.table-wrapper * {
     background-color: white;
 }
 
-.warehouse-table-header {
+.table-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
 }
 
-.warehouse-table th,
-.warehouse-table td {
+.table th,
+.table td {
     padding: 12px;
     text-align: center;
     border-bottom: 1px solid #dddddd;
 }
 
-.warehouse-table th {
+.table th {
     background-color: #f2f2f2;
 }
 
-.warehouse-table th:first-child {
+.table th:first-child {
     border-top-left-radius: 10px;
 }
-.warehouse-table th:last-child {
+.table th:last-child {
     border-top-right-radius: 10px;
 }
 
-.warehouse-table td:last-child {
+.table td:last-child {
     text-align: center;
 }
 

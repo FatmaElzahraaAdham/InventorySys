@@ -1,35 +1,41 @@
 import "../styles/WarehouseStyle.css"
-import WarehouseTable from "../components/WarehouseTable";
-import "../styles/WarehouseTable.css"
-import { useState } from 'react';
+import Table from "../components/Table";
+import "../styles/Table.css"
+import {useState} from 'react';
 import PageTitle from "../components/PageTitle";
 import AddWareHouse from "../components/AddWareHouse";
+import EditButton from "../components/EditButton";
+import DeleteButton from "../components/DeleteButton";
+import "../styles/App.css"
+import TableHeader from "../components/TableHeader";
 
 function Warehouse() {
-    const [warehouses, setWarehouses]= useState([
-    {
-        id: 1,
-        name: 'Warehouse 1',
-        location: 'Location 1',
-        status: 'Active',
-        supervisor: 'John Doe',
-    },
-    {
-        id: 2,
-        name: 'Warehouse 2',
-        location: 'Location 2',
-        status: 'Inactive',
-        supervisor: 'Jane Smith',
-    },
-    {
-        id: 3,
-        name: 'Warehouse 3',
-        location: 'Location 3',
-        status: 'Active',
-        supervisor: 'Bob Johnson',
-    },
-]);
-function newWarehouse(name, location, status,supervisor) {
+    const [warehouses, setWarehouses] = useState([
+        {
+            id: 1,
+            name: 'IT WORKS!',
+            location: 'Location 1',
+            status: 'Active',
+            supervisor: 'John Doe',
+        },
+        {
+            id: 2,
+            name: 'Warehouse 2',
+            location: 'Location 2',
+            status: 'Inactive',
+            supervisor: 'Jane Smith',
+        },
+        {
+            id: 3,
+            name: 'Warehouse 3',
+            location: 'Location 3',
+            status: 'Active',
+            supervisor: 'Bob Johnson',
+        },
+    ]);
+    const columns = ['ID', 'Name', 'Location', 'Status', 'Supervisor'];
+
+    function newWarehouse(name, location, status, supervisor) {
         const newWarehouse = {
             name: name,
             location: location,
@@ -38,22 +44,32 @@ function newWarehouse(name, location, status,supervisor) {
         };
         setWarehouses([...warehouses, newWarehouse]);
     }
+
+    const handleDelete = (item) => {
+        console.log(item.name + " was deleted")
+    };
+
+    let handleEdit = (item) => {
+        console.log(item.name + " was edited")
+    };
     return (
         <div className="page-content">
             <PageTitle title="Warehouse" subtext="View/Manage"/>
-            <div className="warehouse-table-wrapper">
-                <div className="warehouse-table-header">
-                    <h1>Warehouse List</h1>
-                    <div className="table-toolbar">
-                        <AddWareHouse newWarehouse={newWarehouse}/>
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="search-bar"
-                        />
-                    </div>
-                </div>
-                <WarehouseTable warehouses={warehouses} />
+            <div className="table-wrapper">
+                <TableHeader
+                    title="Warehouse List"
+                    buttonText="Add Warehouse"
+                    onButtonClick={AddWareHouse}  //TODO: Fix this
+                />
+                <div>
+                    <Table
+                        data={warehouses}
+                        columns={columns}
+                        onEdit={handleEdit}
+                        onDelete={handleDelete}
+                        editButton={<EditButton/>}
+                        deleteButton={<DeleteButton/>}
+                    />                </div>
             </div>
         </div>
     );
