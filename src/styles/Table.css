@@ -84,10 +84,24 @@
     background-color: #f2f2f2;
 }
 
-.Active {
+.active {
     color: #4caf50;
 }
 
-.Inactive {
+.inactive {
     color: #f44336;
 }
+
+.approved {
+    color: #4caf50;
+}
+
+.rejected {
+    color: #f44336;
+}
+
+.pending {
+    color: #4075e7;
+}
+
+
