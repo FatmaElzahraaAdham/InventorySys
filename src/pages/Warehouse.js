@@ -1,9 +1,12 @@
 import "../styles/WarehouseStyle.css"
 import WarehouseTable from "../components/WarehouseTable";
 import "../styles/WarehouseTable.css"
+import { useState } from 'react';
 import PageTitle from "../components/PageTitle";
+import AddWareHouse from "../components/AddWareHouse";
 
-const warehouses = [
+function Warehouse() {
+    const [warehouses, setWarehouses]= useState([
     {
         id: 1,
         name: 'Warehouse 1',
@@ -25,9 +28,16 @@ const warehouses = [
         status: 'Active',
         supervisor: 'Bob Johnson',
     },
-];
-
-function Warehouse() {
+]);
+function newWarehouse(name, location, status,supervisor) {
+        const newWarehouse = {
+            name: name,
+            location: location,
+            status: status,
+            supervisor: supervisor,
+        };
+        setWarehouses([...warehouses, newWarehouse]);
+    }
     return (
         <div className="page-content">
             <PageTitle title="Warehouse" subtext="View/Manage"/>
@@ -35,7 +45,7 @@ function Warehouse() {
                 <div className="warehouse-table-header">
                     <h1>Warehouse List</h1>
                     <div className="table-toolbar">
-                        <button className="add-btn">Add</button>
+                        <AddWareHouse newWarehouse={newWarehouse}/>
                         <input
                             type="text"
                             placeholder="Search"
