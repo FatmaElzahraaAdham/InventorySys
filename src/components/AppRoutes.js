@@ -6,6 +6,8 @@ import Product from '../pages/Product'
 import Supervisor from '../pages/Supervisor'
 import Login from "./Login"
 import Home from "../pages/Home"
+import Request from "../pages/Request";
+
 
 function AppRoutes(){
     return(
@@ -16,7 +18,7 @@ function AppRoutes(){
             <Route path="/Supervisor" element={<Supervisor/>}></Route>
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Home" element={<Home/>}></Route>
-
+            <Route path="/Request" element={<Request/>}></Route>
         </Routes>
     )
     

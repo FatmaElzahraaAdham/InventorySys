@@ -1,5 +1,3 @@
-// create a react component
-//
 import React from "react";
 import "../styles/PageTitle.css";
 
