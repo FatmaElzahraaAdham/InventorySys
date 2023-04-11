@@ -2,6 +2,8 @@ import "../styles/ProductStyle.css"
 import PageTitle from "../components/PageTitle";
 import ProductCard from '../components/ProductCard';
 import TableHeader from "../components/TableHeader";
+import {useState} from "react";
+import EditProductModal from "../components/EditProductModal";
 
 
 const products = [
@@ -39,15 +41,29 @@ const products = [
         description: "This is product 5",
         photo: "https://picsum.photos/200",
         stock: 8
+    },
+    {
+        product_id: "45367",
+        name: "Product 6",
+        description: "This is product 6",
+        photo: "https://picsum.photos/200",
+        stock: 8
     }
 ];
 
-function handleProductClick(productId) {
-    console.log(`Product ${productId} clicked`);
-    // Perform some action here when a product is clicked, e.g. show a modal, navigate to a new page, etc.
-}
 
 function Product() {
+    const [selectedProduct, setSelectedProduct] = useState(null);
+
+    function handleProductClick(product) {
+        console.log(`Product ${product.product_id} clicked`);
+        setSelectedProduct(product);
+    }
+
+    function handleCloseModal() {
+        setSelectedProduct(null);
+    }
+
     return (
         <div className="page-content">
             <PageTitle title="Products" subtext="View/Manage"/>
@@ -67,13 +83,17 @@ function Product() {
                             description={product.description}
                             photo={product.photo}
                             stock={product.stock}
-                            onClick={handleProductClick}
+                            onClick={() => handleProductClick(product)}
                         />
                     ))}
                 </div>
             </div>
+            {selectedProduct && (
+                <EditProductModal product={selectedProduct} onClose={handleCloseModal} />
+            )}
         </div>
     );
 }
+
 
 export default Product;

@@ -79,6 +79,13 @@
     color: #ffffff;
     border: none;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.add-btn:hover {
+    scale: 1.05;
+    transition: 0.2s ease-in-out;
+    box-shadow: 0 0 1rem rgba(109, 251, 114, 0.5);
 }
 
 .search-bar {
