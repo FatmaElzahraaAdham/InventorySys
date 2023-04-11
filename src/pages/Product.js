@@ -1,6 +1,7 @@
 import "../styles/ProductStyle.css"
 import PageTitle from "../components/PageTitle";
 import ProductCard from '../components/ProductCard';
+import TableHeader from "../components/TableHeader";
 
 
 const products = [
@@ -50,18 +51,26 @@ function Product() {
     return (
         <div className="page-content">
             <PageTitle title="Products" subtext="View/Manage"/>
-            <div className="product-card-container">
-                {products.map(product => (
-                    <ProductCard
-                        key={product.product_id}
-                        product_id={product.product_id}
-                        name={product.name}
-                        description={product.description}
-                        photo={product.photo}
-                        stock={product.stock}
-                        onClick={handleProductClick}
-                    />
-                ))}
+            <div className="product-wrapper">
+                <TableHeader
+                    title="Products List"
+                    buttonText="Add Product"
+                    onButtonClick={null}
+                    showAddButton={true}
+                />
+                <div className="product-card-container">
+                    {products.map(product => (
+                        <ProductCard
+                            key={product.product_id}
+                            product_id={product.product_id}
+                            name={product.name}
+                            description={product.description}
+                            photo={product.photo}
+                            stock={product.stock}
+                            onClick={handleProductClick}
+                        />
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -22,8 +22,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.table-header h1 {
+    margin: 0;
 }
 
 .table th,

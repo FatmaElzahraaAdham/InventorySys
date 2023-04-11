@@ -1,3 +1,10 @@
+.product-wrapper {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-right: 0.1rem;
+}
+
 .product-card-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
