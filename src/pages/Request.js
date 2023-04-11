@@ -45,10 +45,6 @@ function Request() {
         console.log(item.name + " was edited")
     };
 
-    let handleAdd = (item) => {
-        console.log("Add button was clicked");
-    }
-
     return (
         <div className="page-content">
             <PageTitle title="Requests" subtext="View/Manage"/>
@@ -56,7 +52,8 @@ function Request() {
                 <TableHeader
                     title="Requests List"
                     buttonText="Add Request"
-                    onButtonClick={handleAdd}  //TODO: Fix this
+                    onButtonClick={null}
+                    showAddButton={false}
                 />
                 <div>
                     <Table

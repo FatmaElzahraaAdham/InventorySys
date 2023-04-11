@@ -35,8 +35,11 @@ function Warehouse() {
     ]);
     const columns = ['ID', 'Name', 'Location', 'Status', 'Supervisor'];
 
+    const [showAddWarehouse, setShowAddWarehouse] = useState(false);
+
     function newWarehouse(name, location, status, supervisor) {
         const newWarehouse = {
+            id: warehouses.length + 1,
             name: name,
             location: location,
             status: status,
@@ -45,13 +48,18 @@ function Warehouse() {
         setWarehouses([...warehouses, newWarehouse]);
     }
 
-    const handleDelete = (item) => {
+    let handleDelete = (item) => {
         console.log(item.name + " was deleted")
     };
 
     let handleEdit = (item) => {
         console.log(item.name + " was edited")
     };
+
+    let handleAdd = () => {
+        setShowAddWarehouse(!showAddWarehouse);
+    }
+
     return (
         <div className="page-content">
             <PageTitle title="Warehouse" subtext="View/Manage"/>
@@ -59,8 +67,10 @@ function Warehouse() {
                 <TableHeader
                     title="Warehouse List"
                     buttonText="Add Warehouse"
-                    onButtonClick={AddWareHouse}  //TODO: Fix this
+                    onButtonClick={handleAdd}
+                    showAddButton={true}
                 />
+                {showAddWarehouse && <AddWareHouse newWarehouse={newWarehouse}/>}
                 <div>
                     <Table
                         data={warehouses}
@@ -69,7 +79,8 @@ function Warehouse() {
                         onDelete={handleDelete}
                         editButton={<EditButton/>}
                         deleteButton={<DeleteButton/>}
-                    />                </div>
+                    />
+                </div>
             </div>
         </div>
     );
