@@ -28,7 +28,7 @@ import { Link } from "react-router-dom";
             <input    value={pass}  type="password" required  placeholder=" password" id ="password" name="password" onChange={(e)=>setPass(e.target.value)
             }/>
             
-            <button className="submit"  type="submit" OnClick={()=>{console.log(email) }} >  Login  </button>
+            <button className="submit"  type="submit" OnClick={()=>{console.log(email) }} > <Link to={"/Dashboard"} >Login </Link>   </button>
            
 
             </form>
