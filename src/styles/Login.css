@@ -4,9 +4,9 @@
     min-height: 100vh;
    justify-content: center;
   
-  color: #4f2fd1;
+  color: #1353d2;
   
-  background-image: linear-gradient(79deg,#5742e2,#8aacef 48%,#1961ce) ;
+  background-image: linear-gradient(79deg,#78bbf3,#2f90df 48%,#86b5fc) ;
   }
 .auto-form-continer{
     padding: 2rem;
@@ -41,7 +41,7 @@
     
     
 
-    background-image: linear-gradient(79deg,#5742e2,#8aacef 48%,#1961ce) ;
+    background-image: linear-gradient(79deg,#78bbf3,#2f90df 48%,#86b5fc) ;
     border-radius: 10px;
     
     align-items: center;
