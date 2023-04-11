@@ -1,9 +1,13 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
 import "./styles/App.css"
-import Login from './components/Login';
+import  Header  from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import  Content  from "./components/Content";
+
 function App(){
     return <div className="App">
-    <Login/>
+    <Header/>
+    <Sidebar/>
+    <Content />
     </div>
 }
  

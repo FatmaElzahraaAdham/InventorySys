@@ -5,6 +5,7 @@ import Warehouse from '../pages/Warehouse'
 import Product from '../pages/Product'
 import Supervisor from '../pages/Supervisor'
 import Login from "./Login"
+import Home from "../pages/Home"
 
 function AppRoutes(){
     return(
@@ -14,6 +15,8 @@ function AppRoutes(){
             <Route path="/Product" element={<Product/>}></Route>
             <Route path="/Supervisor" element={<Supervisor/>}></Route>
             <Route path="/Login" element={<Login/>}></Route>
+            <Route path="/Home" element={<Home/>}></Route>
+
         </Routes>
     )
     
