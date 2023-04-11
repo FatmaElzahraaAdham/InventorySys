@@ -13,6 +13,11 @@ body{
     height: 100vh;
     background-color: #f6f7fb;
 }
+
+.AppContent {
+    background-color: #f6f7fb;
+}
+
 .AppHeader{
     display: flex;
     justify-content: space-between;
