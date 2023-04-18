@@ -4,6 +4,11 @@
     font-family: 'Mulish', sans-serif;
     color: #242934;
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 body{
     margin: 0;
     padding: 0;

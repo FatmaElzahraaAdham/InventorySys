@@ -4,15 +4,20 @@ import Sidebar from "./components/Sidebar";
 import  Content  from "./components/Content";
 
 import Login from "./components/Login";
-import { Outlet } from "react-router-dom";
 
 function App(){
-    return <div className="App">
-   <Header/>
-    <Sidebar/>
-    <Content />
-    </div>
+    if(true) {  // if user is logged in
+        return(
+        <div className="App">
+            <Header/>
+            <Sidebar/>
+            <Content />
+        </div>);
+    }
+    return (<div>
+            <Login/>
+        </div>);
 }
- 
+
 
 export default App;
