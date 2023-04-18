@@ -5,8 +5,12 @@ import  Content  from "./components/Content";
 
 import Login from "./components/Login";
 
+function handleLogin(){
+    return true;
+}
+
 function App(){
-    if(true) {  // if user is logged in
+    if(handleLogin()) {  // if user is logged in
         return(
         <div className="App">
             <Header/>
