@@ -1,10 +1,10 @@
 import React from 'react';
 import "../styles/EditDeleteBtns.css"
 
-const EditButton = ({ onClick }) => {
+const EditButton = ({ onClick, buttonText }) => {
     return (
         <button className="edit-btn" onClick={onClick}>
-            Edit
+            {buttonText}
         </button>
     );
 };

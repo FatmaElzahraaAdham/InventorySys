@@ -1,12 +1,13 @@
 import React from 'react';
 import "../styles/EditDeleteBtns.css"
 
-const DeleteButton = ({ onClick }) => {
+const DeleteButton = ({ onClick, buttonText }) => {
     return (
         <button className="delete-btn" onClick={onClick}>
-            Delete
+            {buttonText}
         </button>
     );
 };
+
 
 export default DeleteButton;

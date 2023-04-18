@@ -2,7 +2,7 @@ import React from 'react';
 import TableRow from './TableRow';
 import "../styles/Table.css"
 
-const Table = ({ data, columns, onEdit, onDelete, editButton, deleteButton }) => {
+const Table = ({ data, columns, onEdit, onDelete, editButton, editButtonText, deleteButton, deleteButtonText }) => {
     return (
         <table className="table">
             <thead>
@@ -20,7 +20,9 @@ const Table = ({ data, columns, onEdit, onDelete, editButton, deleteButton }) =>
                     item={item}
                     columns={columns}
                     editButton={editButton}
+                    editButtonText={editButtonText}
                     deleteButton={deleteButton}
+                    deleteButtonText={deleteButtonText}
                     onEdit={onEdit}
                     onDelete={onDelete}
                 />

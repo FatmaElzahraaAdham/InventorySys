@@ -2,7 +2,7 @@ import React from 'react';
 import EditButton from './EditButton';
 import DeleteButton from './DeleteButton';
 
-const TableRow = ({ item, columns, editButton, deleteButton, onEdit, onDelete }) => {
+const TableRow = ({ item, columns, editButton, editButtonText, deleteButton, deleteButtonText, onEdit, onDelete }) => {
     return (
         <tr>
             {columns.map((column) => (
@@ -19,10 +19,10 @@ const TableRow = ({ item, columns, editButton, deleteButton, onEdit, onDelete })
             ))}
             <td>
                 {editButton && onEdit && (
-                    <EditButton onClick={() => onEdit(item)} />
+                    <EditButton onClick={() => onEdit(item)} buttonText={editButtonText}/>
                 )}
                 {deleteButton && onDelete && (
-                    <DeleteButton onClick={() => onDelete(item)} />
+                    <DeleteButton onClick={() => onDelete(item)} buttonText={deleteButtonText}/>
                 )}
             </td>
         </tr>

@@ -78,7 +78,9 @@ function Warehouse() {
                         onEdit={handleEdit}
                         onDelete={handleDelete}
                         editButton={<EditButton/>}
+                        editButtonText="Edit"
                         deleteButton={<DeleteButton/>}
+                        deleteButtonText="Delete"
                     />
                 </div>
             </div>

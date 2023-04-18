@@ -38,11 +38,11 @@ function Request() {
     const columns = ['ID', 'Date', 'Supervisor', 'Product', 'Type', 'Quantity', 'Status'];
 
     let handleDelete = (item) => {
-        console.log(item.name + " was deleted")
+        console.log("ID#" + item.id + " was deleted")
     };
 
     let handleEdit = (item) => {
-        console.log(item.name + " was edited")
+        console.log("ID#" + item.id + " was edited")
     };
 
     return (
@@ -62,7 +62,9 @@ function Request() {
                         onEdit={handleEdit}
                         onDelete={handleDelete}
                         editButton={<EditButton/>}
+                        editButtonText={"Approve"}
                         deleteButton={<DeleteButton/>}
+                        deleteButtonText={"Reject"}
                     />
                 </div>
             </div>
