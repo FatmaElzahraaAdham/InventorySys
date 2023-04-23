@@ -17,12 +17,12 @@
      margin-bottom: 30px;
     text-align: center;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: transform 0.2s ease-in-out;
 }
 .supervisor_card:hover {
     cursor: pointer;
     box-shadow: 0 4px 8px 0 rgba(1, 204, 255, 0.2), 0 6px 20px 0 rgba(1, 204, 255, 0.2);
     transform: scale(1.05);
-    transition: all ease-in-out 0.2s;
 }
 
 .card_info .id{

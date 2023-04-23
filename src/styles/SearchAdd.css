@@ -1,0 +1,49 @@
+.searchBar_logo img{
+    width: 20px;
+    height: 20px;
+    background-color: #9ae1f7;
+    
+}
+.table_search_add {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.searchBar_logo .logo{
+    display: inline;
+    background-color: transparent;
+}
+.searchBar_logo .logo .logo_image{
+    border: 1px;
+    border-radius: 10px;
+    height: 28px;
+    width: 38px;
+    background-color: #9ae1f7;
+}
+.Add_btn,
+.search{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+.Add_btn {
+    padding: 10px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #01bef6;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+/* .user_warehouse{
+    width: 10px;
+} */
+
+.search {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+    border-style: none;
+}

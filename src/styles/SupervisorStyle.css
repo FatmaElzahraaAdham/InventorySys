@@ -12,16 +12,9 @@
     margin-bottom: 20px;
     margin-right: 50px;
 }
-.page-content .supervisor-list-all .add-btn{
-    width: 110px;
-    margin-right: 50px;
-    background-color: #01bef6;
-    border: 1px;
-    border-radius: 10px;
-    height: 40px;
-}
 .supervisor-list-all{
     background-color: #fff;
-    width: 100%;
+    width: 96%;
     border-radius: 10px;
+    padding: 1rem;
 }

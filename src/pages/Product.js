@@ -4,6 +4,7 @@ import ProductCard from '../components/ProductCard';
 import TableHeader from "../components/TableHeader";
 import {useState} from "react";
 import EditProductModal from "../components/EditProductModal";
+import SearchAdd from "../components/SearchAdd";
 
 
 const products = [
@@ -68,12 +69,7 @@ function Product() {
         <div className="page-content">
             <PageTitle title="Products" subtext="View/Manage"/>
             <div className="product-wrapper">
-                <TableHeader
-                    title="Products List"
-                    buttonText="Add Product"
-                    onButtonClick={null}
-                    showAddButton={true}
-                />
+                <SearchAdd />
                 <div className="product-card-container">
                     {products.map(product => (
                         <ProductCard

@@ -2,6 +2,7 @@ import "../styles/WarehouseStyle.css"
 import WarehouseTable from "../components/WarehouseTable";
 import "../styles/WarehouseTable.css"
 import PageTitle from "../components/PageTitle";
+import SearchAdd from "../components/SearchAdd";
 
 const warehouses = [
     {
@@ -32,22 +33,7 @@ function Warehouse() {
         <div className="page-content">
             <PageTitle title="Warehouse" subtext="View/Manage"/>
             <div className="warehouse-table-block">
-                    <div className="table_search_add">
-                        <button className="Add_btn">ADD</button>
-                        <div className="searchBar_logo">
-                        <input
-                            type="text"
-                            placeholder="Search"
-                            className="search"
-                        />
-                        <div className="logo">
-                         <button className="logo_image">
-                         <img src="../../images/search.png" alt=""></img>
-                         </button>
-                        </div>
-                        </div>
-
-                </div>
+                <SearchAdd />
                 <WarehouseTable warehouses={warehouses} />
             </div>
         </div>
