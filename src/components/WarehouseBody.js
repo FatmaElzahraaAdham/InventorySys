@@ -22,11 +22,17 @@ const WarehouseBody = (props) => {
             <td>{props.id}</td>
             <td>{props.name}</td>
             <td>{props.location}</td>
-            <td>{activity(props.status)}</td>
+            <td>
+                <div className="state-container">
+                    {activity(props.status)}
+                </div>
+            </td>
             <td><UserOutlined className='user_warehouse'/>  {props.supervisor}</td>
             <td>
-                <button className="edit_btn">Edit</button>
-                <button className="del_btn">Delete</button>
+                <div className='btns-container'>
+                    <button className="edit_btn">Edit</button>
+                    <button className="del_btn">Delete</button>
+                </div>
             </td>
         </tr>
         

@@ -14,22 +14,17 @@
     border-radius: 1rem;
 }
 
-.warehouse-table-block * {
-    background-color: white;
-}
-
-
 .warehouse-table th{
     padding: 12px;
-    /* text-align: center; */
-    text-align: left;
+    text-align: center;
     border-bottom: 1px solid #dddddd;
 }
 .warehouse-table td {
-    padding: 12px;
-    /* text-align: center; */
     border-bottom: 1px solid #dddddd;
+    text-align: center;
+    vertical-align: middle;
 }
+
 .warehouse-table th{
     background-color: #f2f2f2;
 }
@@ -60,6 +55,17 @@
     background-color: #f44336;
 }
 
+.state-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btns-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 .activee{
     /* color: green; */
@@ -80,5 +86,5 @@
     border: 1px;
     border-radius: 10px;
     opacity: 0.7;
-    
+
 }
