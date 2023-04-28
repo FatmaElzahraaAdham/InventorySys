@@ -6,7 +6,7 @@ import  Content  from "./components/Content";
 import Login from "./components/Login";
 
 function handleLogin(){
-    return true;
+    return localStorage.getItem('loggedIn') === 'true';
 }
 
 function App(){
