@@ -2,31 +2,9 @@ import React from 'react';
 import WarehouseBody from './WarehouseBody';
 import '../styles/WarehouseTable.css';
 
-const WarehousesData = [
-    {
-        id: 1,
-        name: 'Warehouse 1',
-        location: 'Location 1',
-        status: 'Active',
-        supervisor: 'John Doe',
-    },
-    {
-        id: 2,
-        name: 'Warehouse 2',
-        location: 'Location 2',
-        status: 'Active',
-        supervisor: 'Jane Smith',
-    },
-    {
-        id: 3,
-        name: 'Warehouse 3',
-        location: 'Location 3',
-        status: 'Inactive',
-        supervisor: 'Bob Johnson',
-    },
-];
-const WarehouseTable = () => {
-    const item= WarehousesData;
+
+const WarehouseTable = (props) => {
+    const WarehousesData = props.warehouses;
     return (
         <table className="warehouse-table">
             <thead>
@@ -41,13 +19,12 @@ const WarehouseTable = () => {
             </thead>
             <tbody>
             {WarehousesData.map((item) => (
-                <WarehouseBody 
-                key={item.id} 
-                id={item.id}
+                <WarehouseBody
+                id={item.warehouse_id}
                 name={item.name} 
                 location={item.location} 
                 status={item.status} 
-                supervisor={item.supervisor}
+                supervisor={item.supervisor_id}
                  />
             ))}
             </tbody>

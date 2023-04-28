@@ -2,14 +2,14 @@ import React from 'react';
  import {UserOutlined} from '@ant-design/icons';
 const WarehouseBody = (props) => {
     const activity=(value)=>{
-        if(value=="Active"){
+        if(value=="active"){
           return(
             <h4 className='activee'>
               Active
             </h4>
           )
         }
-        else if(value=="Inactive"){
+        else if(value=="inactive"){
           return(
             <h4 className='inactivee'>
               Inactive
