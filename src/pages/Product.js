@@ -1,60 +1,31 @@
 import "../styles/ProductStyle.css"
 import PageTitle from "../components/PageTitle";
 import ProductCard from '../components/ProductCard';
-import TableHeader from "../components/TableHeader";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import EditProductModal from "../components/EditProductModal";
 import SearchAdd from "../components/SearchAdd";
 
 
-const products = [
-    {
-        product_id: "123",
-        name: "Product 1",
-        description: "This is product 1",
-        photo: "https://picsum.photos/200",
-        stock: 10
-    },
-    {
-        product_id: "456",
-        name: "Product 2",
-        description: "This is product 2",
-        photo: "https://picsum.photos/200",
-        stock: 5
-    },
-    {
-        product_id: "789",
-        name: "Product 3",
-        description: "This is product 3",
-        photo: "https://picsum.photos/200",
-        stock: 20
-    },
-    {
-        product_id: "1011",
-        name: "Product 4",
-        description: "This is product 4",
-        photo: "https://picsum.photos/200",
-        stock: 15
-    },
-    {
-        product_id: "1213",
-        name: "Product 5",
-        description: "This is product 5",
-        photo: "https://picsum.photos/200",
-        stock: 8
-    },
-    {
-        product_id: "45367",
-        name: "Product 6",
-        description: "This is product 6",
-        photo: "https://picsum.photos/200",
-        stock: 8
-    }
-];
+
 
 
 function Product() {
-    const [selectedProduct, setSelectedProduct] = useState(null);
+    const [selectedProduct, setSelectedProduct] = useState([]);
+
+    const [products, setProducts] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:3000/getProducts', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('sessionID')
+            },
+        })
+            .then(response => response.json())
+            .then(data => setProducts(data))
+            .catch(error => console.error(error));
+    }, []);
 
     function handleProductClick(product) {
         console.log(`Product ${product.product_id} clicked`);
@@ -73,7 +44,6 @@ function Product() {
                 <div className="product-card-container">
                     {products.map(product => (
                         <ProductCard
-                            key={product.product_id}
                             product_id={product.product_id}
                             name={product.name}
                             description={product.description}
