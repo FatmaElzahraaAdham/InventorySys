@@ -5,6 +5,12 @@ import {Logo} from "./Logo"
 function Sidebar(){
    const navigate = useNavigate();
 
+    function handleLogout() {
+        localStorage.setItem('loggedIn', "false");
+        navigate('/');
+        window.location.reload();
+    }
+
     return (
         <div className="AppSidebar">
         <Logo/>
@@ -25,7 +31,7 @@ function Sidebar(){
                     );
                 })}
             </ul>
-        <div className="logout">Logout</div>
+        <div className="logout" onClick={handleLogout}>Logout</div>
         </div>
     );
 }

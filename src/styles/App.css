@@ -167,6 +167,10 @@ body{
     margin: 15px 30%;
     background-color: white;
 }
+.logout:hover{
+    cursor: pointer;
+    color: #ff6161;
+}
 .AppFooter{
     position: fixed;
     left: 0;
