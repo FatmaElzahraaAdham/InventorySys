@@ -22,7 +22,7 @@ const Login = (props) => {
 
             if (data.session && data.session.cookie && data.session.cookie.path) {
                 // Save the session ID in local storage or state
-                localStorage.setItem('sessionID', data.session.cookie.path);
+                localStorage.setItem('sessionID', data.session.user_id);
 
                 // Redirect the user to the appropriate page based on user type
                 if (data.message === "login successful Admin") {
