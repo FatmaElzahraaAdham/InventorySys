@@ -6,11 +6,8 @@ import EditProductModal from "../components/EditProductModal";
 import SearchAdd from "../components/SearchAdd";
 
 
-
-
-
 function Product() {
-    const [selectedProduct, setSelectedProduct] = useState([]);
+    const [selectedProduct, setSelectedProduct] = useState(null);
 
     const [products, setProducts] = useState([]);
 
@@ -40,7 +37,7 @@ function Product() {
         <div className="page-content">
             <PageTitle title="Products" subtext="View/Manage"/>
             <div className="product-wrapper">
-                <SearchAdd />
+                <SearchAdd/>
                 <div className="product-card-container">
                     {products.map(product => (
                         <ProductCard
@@ -55,7 +52,7 @@ function Product() {
                 </div>
             </div>
             {selectedProduct && (
-                <EditProductModal product={selectedProduct} onClose={handleCloseModal} />
+                <EditProductModal product={selectedProduct} onClose={handleCloseModal}/>
             )}
         </div>
     );
