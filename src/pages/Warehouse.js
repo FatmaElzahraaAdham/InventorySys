@@ -21,7 +21,6 @@ function Warehouse() {
             .catch(error => console.error(error));
     }, []);
 
-    console.log(warehouses);
     return (
         <div className="page-content">
             <PageTitle title="Warehouse" subtext="View/Manage"/>
