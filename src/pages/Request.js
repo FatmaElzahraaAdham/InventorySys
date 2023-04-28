@@ -17,8 +17,9 @@ function fitData(data) {
             quantity: item.quantity,
             status: item.status
         }
-    });
+    }).reverse();
 }
+
 function Request() {
 
     const [requests, setRequests] = useState([]);
