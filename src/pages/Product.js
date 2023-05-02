@@ -25,7 +25,6 @@ function Product() {
     }, []);
 
     function handleProductClick(product) {
-        console.log(`Product ${product.product_id} clicked`);
         setSelectedProduct(product);
     }
 

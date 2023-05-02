@@ -10,11 +10,30 @@ function EditProductModal({ product, onClose }) {
     const [stock, setStock] = useState(product.stock);
 
     // Handle the form submission here
-    function handleSubmit(event) {
+    async function handleSubmit(event) {
         event.preventDefault();
-        // Update the product here using the form data
-        onClose();
+        const updatedProduct = {
+            ...product,
+            name,
+            description,
+            photo,
+            stock: parseInt(stock)
+        };
+        console.log(updatedProduct);
+        const response = await fetch(`http://localhost:3000/updateProduct/${product.product_id}`, {
+            method: "PUT",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(updatedProduct)
+        });
+        if (response.ok) {
+            onClose();
+        } else {
+            console.error("Failed to update product");
+        }
     }
+
 
     return (
         <div className="product-modal">
