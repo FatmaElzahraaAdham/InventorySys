@@ -29,6 +29,7 @@ function EditProductModal({ product, onClose }) {
         });
         if (response.ok) {
             onClose();
+            window.location.reload();
         } else {
             console.error("Failed to update product");
         }
