@@ -38,12 +38,54 @@ function Request() {
             .catch(error => console.error(error));
     }, []);
 
+    // Reject request
     let handleDelete = (item) => {
-        console.log("ID#" + item.id + " was denied")
+        console.log("ID#" + item.id + " was denied");
+        fetch('http://localhost:3000/updateRequestReject', {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': localStorage.getItem('sessionID')
+            },
+            body: JSON.stringify({
+                request_id: item.id
+            })
+        }).then(() => {
+            const updatedRequests = requests.map((request) => {
+                if (request.id === item.id) {
+                    return {...request, status: 'rejected'};
+                }
+                return request;
+            });
+            setRequests(updatedRequests);
+            alert(`Request ID#${item.id} Rejected`);
+        }).catch(error => console.error(error));
     };
 
+
+    // Approve request
     let handleEdit = (item) => {
-        console.log("ID#" + item.id + " was approved")
+        console.log("ID#" + item.id + " was approved");
+        fetch('http://localhost:3000/updateRequestAccept', {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Authorization': localStorage.getItem('sessionID')
+                },
+                body: JSON.stringify({
+                    request_id: item.id
+                })
+            }
+        ).then(() => {
+            const updatedRequests = requests.map((request) => {
+                if (request.id === item.id) {
+                    return {...request, status: 'approved'};
+                }
+                return request;
+            });
+            setRequests(updatedRequests);
+            alert(`Request ID#${item.id} Accepted`);
+        }).catch(error => console.error(error));
     };
 
 
