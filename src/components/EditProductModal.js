@@ -19,19 +19,38 @@ function EditProductModal({ product, onClose }) {
             photo,
             stock: parseInt(stock)
         };
-        console.log(updatedProduct);
-        const response = await fetch(`http://localhost:3000/updateProduct/${product.product_id}`, {
-            method: "PUT",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(updatedProduct)
-        });
-        if (response.ok) {
-            onClose();
-            window.location.reload();
-        } else {
-            console.error("Failed to update product");
+
+        if(product.product_id != null) {
+            const response = await fetch(`http://localhost:3000/updateProduct/${product.product_id}`, {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json",
+                    'Authorization': localStorage.getItem('sessionID')
+                },
+                body: JSON.stringify(updatedProduct)
+            });
+            if (response.ok) {
+                onClose();
+                window.location.reload();
+            } else {
+                console.error("Failed to update product");
+            }
+        }
+        else {
+            const response = await fetch(`http://localhost:3000/addProduct`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    'Authorization': localStorage.getItem('sessionID')
+                },
+                body: JSON.stringify(updatedProduct)
+            });
+            if (response.ok) {
+                onClose();
+                window.location.reload();
+            } else {
+                console.error("Failed to add product");
+            }
         }
     }
 

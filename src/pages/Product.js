@@ -32,11 +32,23 @@ function Product() {
         setSelectedProduct(null);
     }
 
+    function handleAddProduct() {
+        setSelectedProduct({
+            product_id: null,
+            name: "",
+            description: "",
+            photo: "",
+            stock: 0
+        });
+
+        console.log("Add product clicked!")
+    }
+
     return (
         <div className="page-content">
             <PageTitle title="Products" subtext="View/Manage"/>
             <div className="product-wrapper">
-                <SearchAdd/>
+                <SearchAdd onAdd={handleAddProduct}/>
                 <div className="product-card-container">
                     {products.map(product => (
                         <ProductCard
