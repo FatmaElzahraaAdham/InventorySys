@@ -26,7 +26,7 @@ function Request() {
     const columns = ['ID', 'Date', 'Supervisor', 'Product', 'Type', 'Quantity', 'Status'];
 
     useEffect(() => {
-        fetch('http://localhost:3000/allRequest', {
+        fetch('http://localhost:3000/request', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
