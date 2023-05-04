@@ -87,6 +87,13 @@ function Warehouse() {
         setShowAddModal(false);
     }
 
+    let handleEdit = (item) => {
+        console.log("edit" + item);
+    }
+
+    let handleDelete = (item) => {
+        console.log("delete" + item);
+    }
     return (
         <div className="page-content">
             <PageTitle title="Warehouse" subtext="View/Manage"/>
