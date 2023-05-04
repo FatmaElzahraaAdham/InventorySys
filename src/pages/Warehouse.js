@@ -40,7 +40,7 @@ function handleWarehouseSubmit(warehouse) {
     })
         .then(response => {
             if (response.ok) {
-                // window.location.reload();
+                window.location.reload();
             } else {
                 console.error("Failed to save warehouse");
             }
