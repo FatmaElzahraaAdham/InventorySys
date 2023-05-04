@@ -86,7 +86,7 @@
     margin-top: 2rem;
 }
 
-.product-modal-actions .save, .product-modal-actions .cancel {
+.product-modal-actions .save, .product-modal-actions .cancel, .product-modal-actions .delete {
     background-color: #4caf50;
     color: white;
     border: none;
@@ -101,7 +101,7 @@
     transition: 0.2s ease-in-out;
 }
 
-.product-modal-actions .save:hover, .product-modal-actions .cancel:hover {
+.product-modal-actions .save:hover, .product-modal-actions .cancel:hover, .product-modal-actions .delete:hover {
     cursor: pointer;
     scale: 1.1;
     transition: 0.2s ease-in-out;
@@ -119,4 +119,9 @@
     border: 1px solid #ced4da;
     background-color: #fff;
     cursor: pointer;
+}
+
+.product-modal-actions .delete {
+    background-color: #282b32;
+    color: white;
 }
