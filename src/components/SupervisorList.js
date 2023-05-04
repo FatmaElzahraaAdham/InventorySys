@@ -15,7 +15,7 @@ const SupervisorList = () => {
 
     const [SupervisorData, setSupervisorData] = useState([]);
     useEffect(() => {
-        fetch('http://localhost:3000/allSupervisors', {
+        fetch('http://localhost:3000/supervisor', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json',
