@@ -12,6 +12,7 @@ import Request from "../pages/Request";
 function AppRoutes(){
     return(
         <Routes>
+            <Route path="/" element={<Dashboard/>}></Route>
             <Route path="/Dashboard" element={<Dashboard/>}></Route>
             <Route path="/Warehouse" element={<Warehouse/>}></Route>
             <Route path="/Product" element={<Product/>}></Route>

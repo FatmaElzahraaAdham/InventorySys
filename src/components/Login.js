@@ -27,7 +27,7 @@ const Login = (props) => {
                 // Redirect the user to the appropriate page based on user type
                 if (data.message === "login successful Admin") {
                     localStorage.setItem('loggedIn', "true");
-                    navigate('/Dashboard');
+                    navigate('/');
                     window.location.reload();
                 } else if (data.message === "login successful Supervisor") {
                     localStorage.setItem('loggedIn', "true");
