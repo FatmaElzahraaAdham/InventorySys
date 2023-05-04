@@ -2,11 +2,9 @@ import { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/EditProductModal.css"
 
-function GeneralModal({ title, initialValues, formFields, onSubmit, onClose }) {
-    // Define the form fields and their initial values here
+function GeneralModal({ title, initialValues, formFields, onSubmit, onClose, onDelete }) {
     const [values, setValues] = useState(initialValues);
 
-    // Handle the form submission here
     function handleSubmit(event) {
         event.preventDefault();
         onSubmit(values);
@@ -51,6 +49,11 @@ function GeneralModal({ title, initialValues, formFields, onSubmit, onClose }) {
                         <button className="save" type="submit">
                             Save
                         </button>
+                        {onDelete && (
+                            <button className="delete" type="button" onClick={onDelete}>
+                                Delete
+                            </button>
+                        )}
                         <button className="cancel" type="button" onClick={onClose}>
                             Cancel
                         </button>
@@ -78,6 +81,7 @@ GeneralModal.propTypes = {
     ).isRequired,
     onSubmit: PropTypes.func.isRequired,
     onClose: PropTypes.func.isRequired,
+    onDelete: PropTypes.func,
 };
 
 export default GeneralModal;
