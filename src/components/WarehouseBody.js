@@ -74,8 +74,25 @@ const WarehouseBody = (props) => {
     }
 
     function handleSaveModal(newValues) {
-        console.log('New values:', newValues);
-        setIsModalOpen(false);
+        newValues = { ...newValues, supervisor_id: props.supervisor}
+        return fetch(`http://localhost:3000/warehouse/${props.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+                Authorization: localStorage.getItem('sessionID'),
+            },
+            body: JSON.stringify(newValues),
+        })
+            .then((response) => {
+                if (response.ok) {
+                    window.location.reload();
+                } else {
+                    console.error('Failed to save warehouse');
+                }
+            })
+            .catch((error) => {
+                console.error('Failed to save warehouse', error);
+            });
     }
 
 
