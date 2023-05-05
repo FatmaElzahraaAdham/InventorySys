@@ -125,3 +125,7 @@
     background-color: #282b32;
     color: white;
 }
+
+.ducttapefix {
+    position: absolute;
+}

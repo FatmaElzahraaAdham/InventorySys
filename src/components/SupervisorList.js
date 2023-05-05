@@ -1,15 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import "../styles/SupervisorList.css"
 import SupervisorCard from "../components/SupervisorCard";
-// {
-//     id:1,
-//         name: "mark smith",
-//     phone : "0111555444",
-//     status :"Active",
-//     email:"xxxx@gmail.com",
-//     type:"",
-//     gender:"man"
-// }
 
 const SupervisorList = () => {
 
@@ -41,6 +32,7 @@ const SupervisorList = () => {
                                 email={item.email}
                                 type={item.type}
                                 gender={item.gender}
+                                password={item.password}
                             />);
                     },
                 )
