@@ -129,6 +129,7 @@ const SupervisorCard = (props) => {
                     formFields={formFields}
                     onSubmit={handleModalSubmit}
                     onClose={handleModalClose}
+                    onDelete={handleDeleteSupervisor}
                 />
             )}
         </div>
