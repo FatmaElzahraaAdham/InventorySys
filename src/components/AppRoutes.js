@@ -7,6 +7,7 @@ import Supervisor from '../pages/Supervisor'
 import Login from "./Login"
 import Home from "../pages/Home"
 import Request from "../pages/Request";
+import ProductAssignment from "../pages/ProductAssignment";
 
 
 function AppRoutes(){
@@ -20,6 +21,7 @@ function AppRoutes(){
             <Route path="/Login" element={<Login/>}></Route>
             <Route path="/Home" element={<Home/>}></Route>
             <Route path="/Request" element={<Request/>}></Route>
+            <Route path="/Productassign" element={<ProductAssignment/>}></Route>
         </Routes>
     )
     

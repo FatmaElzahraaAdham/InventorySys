@@ -1,5 +1,5 @@
 import React from "react";
-import {AppstoreOutlined, BankOutlined, FileDoneOutlined, ShoppingCartOutlined, TeamOutlined,} from "@ant-design/icons";
+import {AppstoreOutlined, BankOutlined, FileDoneOutlined, ShoppingCartOutlined, TeamOutlined, CheckSquareOutlined} from "@ant-design/icons";
 
 export const SidebarData = [
     {
@@ -26,6 +26,11 @@ export const SidebarData = [
         title: "Requests",
         icon: <FileDoneOutlined/>,
         link: "/Request",
+    },
+    {
+        title: "Assign",
+        icon: <CheckSquareOutlined />,
+        link: "/Productassign",
     }
 
 ]
