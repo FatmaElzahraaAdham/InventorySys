@@ -10,9 +10,11 @@ const SearchAdd = ({ onAdd }) => {
 
     return (
         <div className="table_search_add">
-            <button className="Add_btn" onClick={handleAddClick}>
-                ADD
-            </button>
+            {typeof onAdd === 'function' && (
+                <button className="Add_btn" onClick={handleAddClick}>
+                    ADD
+                </button>
+            )}
             <div className="searchBar_logo">
                 <input type="text" placeholder="Search" className="search" />
                 <div className="logo">
