@@ -42,6 +42,7 @@
 .product-card-subtext {
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .product-card-subtext p {
