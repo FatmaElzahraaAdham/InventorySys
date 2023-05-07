@@ -38,11 +38,28 @@ function Supervisor_product() {
         setSelectedProduct(null);
     }
 
-    function handleSubmitProduct(values) {
-
+    const handleSubmitProduct = (values) => {
+        const data = {
+            user_id: localStorage.getItem('sessionID'),
+            product_id: values.product_id,
+            quantity: Math.abs(values.new_stock),
+            request_type: values.new_stock > 0 ? "increment" : "decrement"
+        }
+        console.log(data);
+        // send stock request
+        fetch('http://localhost:3000/supervisor/requests', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(data),
+        })
+            .then(response => response.json())
+            .then(reqData => console.log(reqData))
+            .catch(error => console.error(error));
     }
 
-    console.log(products);
+
 
     return (
         <div className="page-content">
