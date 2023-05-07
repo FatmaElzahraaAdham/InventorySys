@@ -1,6 +1,6 @@
 
 import { useNavigate } from "react-router-dom";
-import { SidebarData } from "./SidebarData";
+import  SidebarData  from "./SidebarData";
 import {Logo} from "./Logo"
 function Sidebar(){
    const navigate = useNavigate();

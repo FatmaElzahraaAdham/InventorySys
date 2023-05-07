@@ -1,6 +1,5 @@
 import "../styles/ProductStyle.css"
 import PageTitle from "../components/PageTitle";
-import ProductCard from '../components/ProductCard';
 
 
 function Supervisor_product() {
