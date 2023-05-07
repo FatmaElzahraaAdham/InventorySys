@@ -17,14 +17,16 @@ const TableRow = ({ item, columns, editButton, editButtonText, deleteButton, del
                     {item[column.toLowerCase()]}
                 </td>
             ))}
-            <td>
-                {editButton && onEdit && (
-                    <EditButton onClick={() => onEdit(item)} buttonText={editButtonText}/>
-                )}
-                {deleteButton && onDelete && (
-                    <DeleteButton onClick={() => onDelete(item)} buttonText={deleteButtonText}/>
-                )}
-            </td>
+            { (editButton && onEdit) &&
+                <td>
+                    {editButton && onEdit && (
+                        <EditButton onClick={() => onEdit(item)} buttonText={editButtonText}/>
+                    )}
+                    {deleteButton && onDelete && (
+                        <DeleteButton onClick={() => onDelete(item)} buttonText={deleteButtonText}/>
+                    )}
+                </td>
+            }
         </tr>
     );
 };

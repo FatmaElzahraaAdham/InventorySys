@@ -10,7 +10,7 @@ const Table = ({ data, columns, onEdit, onDelete, editButton, editButtonText, de
                 {columns.map((column) => (
                     <th key={column}>{column}</th>
                 ))}
-                <th>Manage</th>
+                {(onDelete && onEdit) && <th>Manage</th>}
             </tr>
             </thead>
             <tbody>
