@@ -16,6 +16,7 @@ function App(){
         if(handleType()){
            return( <div className="App">
             <Header/>
+            <Sidebar/>
             <Content />
         </div>);
         }else{
