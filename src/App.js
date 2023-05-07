@@ -8,15 +8,25 @@ import Login from "./components/Login";
 function handleLogin(){
     return localStorage.getItem('loggedIn') === 'true';
 }
-
+function handleType(){
+    return localStorage.getItem('sessionID') !== '1';
+}
 function App(){
     if(handleLogin()) {  // if user is logged in
-        return(
+        if(handleType()){
+           return( <div className="App">
+            <Header/>
+            <Content />
+        </div>);
+        }else{
+            return(
         <div className="App">
             <Header/>
             <Sidebar/>
             <Content />
         </div>);
+        }
+        
     }
     return (<div>
             <Login/>

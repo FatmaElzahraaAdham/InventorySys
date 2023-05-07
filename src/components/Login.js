@@ -31,7 +31,10 @@ const Login = (props) => {
                     window.location.reload();
                 } else if (data.message === "login successful Supervisor") {
                     localStorage.setItem('loggedIn', "true");
-                    // props.history.push(`/supervisor/${data.session.warehouse_id}`);
+                    localStorage.setItem('warehouse_id',data.session.warehouse_id);
+                    navigate('/Supervisor/products');
+                    window.location.reload();
+
                 }
             } else {
                 // Display an error message to the user if session data is missing
