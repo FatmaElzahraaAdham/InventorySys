@@ -41,11 +41,10 @@ body{
     background-color: white;
 }
 
-.header-right * {
+/* .header-right * {
     background-color: white;
-}
+} */
 .icon-header-right{
-    background-color: #586382;
     font-size: 26px;
     color: white;
     width: 30px;
