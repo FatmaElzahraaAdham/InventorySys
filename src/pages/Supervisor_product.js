@@ -56,6 +56,7 @@ function Supervisor_product() {
         })
             .then(response => response.json())
             .then(reqData => console.log(reqData))
+            .then(setSelectedProduct(null))
             .catch(error => console.error(error));
     }
 
