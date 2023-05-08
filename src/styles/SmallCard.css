@@ -26,7 +26,7 @@
     height: 70px;
     width: 70px;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 5px;
 }
 
 .small-card * {
@@ -35,7 +35,6 @@
 
 /* h2 is the text under image */
 .small-card h2 {
-    margin-top: 0;
     font-size: 1rem;
 }
 
