@@ -10,6 +10,15 @@
     justify-content: space-between;
 }
 
+.searchBar_logo {
+    display: flex;
+    min-width: 0;
+}
+
+.searchBar_logo input {
+    width: auto;
+}
+
 .searchBar_logo .logo{
     display: inline;
     background-color: transparent;
@@ -25,6 +34,7 @@
 .search{
     margin-left: 10px;
     margin-bottom: 20px;
+    height: fit-content;
 }
 
 .Add_btn {
@@ -45,5 +55,4 @@
     border: none;
     border-radius: 10px;
     background-color: #f2f2f2;
-    border-style: none;
 }

@@ -14,7 +14,7 @@
     background-color: #fefefe;
 
     margin: 10vh auto; /* 10vh from the top and centered */
-    padding: 20px;
+    padding: 2rem;
     border: 1px solid #888;
     border-radius: 1rem;
     width: 20%; /* Could be more or less, depending on screen size */
@@ -27,6 +27,7 @@
 .product-modal-content label {
     display: flex;
     flex-direction: column;;
+    width: 100%;
 }
 
 .product-modal-content input {
@@ -126,6 +127,9 @@
     color: white;
 }
 
-.ducttapefix {
-    position: absolute;
+.product-modal h2 {
+    font-size: 2.3rem;
+    font-weight: 800;
+    margin-top: 1rem;
 }
+

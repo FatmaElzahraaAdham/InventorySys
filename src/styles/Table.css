@@ -22,8 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 3rem;
-    margin-top: 1rem;
+    margin: 0 0.5rem 3rem 0.5rem;
 }
 
 .table-header h1 {
@@ -115,6 +114,10 @@
 
 .pending {
     color: #4075e7;
+}
+
+.table-toolbar input{
+    width: auto;
 }
 
 
